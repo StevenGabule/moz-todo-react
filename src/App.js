@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
+import DisplayName from './components/DisplayName';
 import './App.css';
 
 function App() {
+  const name = 'John Paul Gabule';
+  const [username, setUsername] = useState('mike');
+
+  function handleOnChange(e) {
+    setUsername(e.target.value);
+  }
+
+  useEffect(() => {
+    document.title = username;
+  }, [username]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <h1>Hello ReactJS</h1>
+      <DisplayName name={name} age={28} gender={'male'} />
+      <p>
+        <input type={'text'} value={username} onChange={handleOnChange} />
+      </p>
+      {username}
     </div>
   );
 }
