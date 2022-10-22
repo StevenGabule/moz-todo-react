@@ -1,0 +1,13 @@
+Our app's user stories
+In software development, a user story is an actionable goal from the perspective of the user. 
+Defining user stories before we begin our work will help us focus our work. 
+Our app should fulfill the following stories:
+
+As a user, I can
+
+	1. read a list of tasks.
+	2. add a task using the mouse or keyboard.
+	3. mark any task as completed, using the mouse or keyboard.
+	4. delete any task, using the mouse or keyboard.
+	5. edit any task, using the mouse or keyboard.
+	6. view a specific subset of tasks: All tasks, only the active task, or only the completed tasks.
